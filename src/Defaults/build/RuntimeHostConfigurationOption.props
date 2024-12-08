@@ -1,0 +1,8 @@
+<Project>
+
+  <ItemGroup Label="Json Config">
+    <RuntimeHostConfigurationOption Include="System.Text.Json.Serialization.RespectRequiredConstructorParametersDefault" Value="true" />
+    <RuntimeHostConfigurationOption Include="System.Text.Json.Serialization.RespectNullableAnnotationsDefault" Value="true" />
+  </ItemGroup>
+
+</Project>

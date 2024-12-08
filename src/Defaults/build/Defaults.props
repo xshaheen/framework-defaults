@@ -1,0 +1,10 @@
+<!-- .props files - Defines properties used during the build process. -->
+<Project>
+
+  <Import Project="$(MSBuildThisFileDirectory)SupportGeneral.props" />
+  <Import Project="$(MSBuildThisFileDirectory)SupportDetectContinuousIntegration.props" />
+  <Import Project="$(MSBuildThisFileDirectory)RuntimeHostConfigurationOption.props" />
+  <Import Project="$(MSBuildThisFileDirectory)GlobalUsing.props" />
+  <Import Project="$(MSBuildThisFileDirectory)SupportPackageInformation.props" Condition=" '$(DisableSupportPackageInformation)' != 'true' " />
+
+</Project>

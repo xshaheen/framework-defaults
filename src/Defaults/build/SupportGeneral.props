@@ -1,0 +1,72 @@
+<Project>
+
+  <PropertyGroup Label="Project categorisation">
+    <IsTestableProject>false</IsTestableProject>
+    <IsTestableProject Condition=" $(MSBuildProjectName.Contains('.Tests.')) ">true</IsTestableProject>
+  </PropertyGroup>
+
+  <PropertyGroup Label="General Configurations">
+    <RootNamespace>$(MSBuildProjectName)</RootNamespace>
+    <AssemblyName>$(MSBuildProjectName)</AssemblyName>
+
+    <LangVersion>latest</LangVersion>
+    <WarningLevel>9999</WarningLevel>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <Features>strict</Features>
+
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>All</AnalysisMode>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <ReportAnalyzer>true</ReportAnalyzer>
+    <RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
+    <RunAnalyzersDuringLiveAnalysis>true</RunAnalyzersDuringLiveAnalysis>
+    <_SkipUpgradeNetAnalyzersNuGetWarning>true</_SkipUpgradeNetAnalyzersNuGetWarning>
+    <SuppressNETCoreSdkPreviewMessage>true</SuppressNETCoreSdkPreviewMessage>
+
+    <CheckEolTargetFramework Condition=" '$(Configuration)' == 'Release' ">false</CheckEolTargetFramework>
+    <SuppressTfmSupportBuildWarnings Condition=" '$(Configuration)' == 'Release' ">true</SuppressTfmSupportBuildWarnings>
+
+    <AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
+
+    <!--
+      Make sure any documentation comments which are included in code get checked for syntax during the build, but do
+      not report warnings for missing comments.
+      CS1573: Parameter 'parameter' has no matching param tag in the XML comment for 'parameter' (but other parameters do)
+      CS1591: Missing XML comment for publicly visible type or member 'Type_or_Member'
+      CS1712: Type parameter 'type_parameter' has no matching typeparam tag in the XML comment on 'type_or_member' (but other type parameters do)
+      CA1031: Do not catch general exception types
+    -->
+    <NoWarn>$(NoWarn)1573;1591;1712;CA1031;</NoWarn>
+    <!--
+      1591: Missing XML comment for publicly visible type or member
+      CA1707: Identifiers should not contain underscores
+      IDE1006: Code-style naming rules
+      VSTHRD200 Use Async suffix for async methods
+      CA1822: Mark members as static
+      CA1515: Consider making public types internal
+      CA2007: Do not directly await a Task
+      CS8604: Possible null reference argument
+      S4144: Methods should not have identical implementations
+      CA5394: Random is an insecure random number generator.
+      IDE0022: Use expression body for methods
+      CA1308: Normalize strings to uppercase
+    -->
+    <NoWarn Condition="'$(IsTestableProject)' == 'true'">$(NoWarn);1591;CA1707;IDE1006;IDE0022;VSTHRD200;CA1822;CA1515;CA2007;CS8604;S4144;CA5394;CA1308</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Error Handling" Condition=" '$(Configuration)' == 'Release' ">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Language Configuration">
+    <NeutralLanguage>en</NeutralLanguage>
+    <PreferredUILang>en</PreferredUILang>
+  </PropertyGroup>
+
+</Project>

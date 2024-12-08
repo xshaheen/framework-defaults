@@ -1,0 +1,21 @@
+<Project>
+
+  <!-- 👇 Provides warnings during restore if any packages used by your project have known vulnerabilities -->
+
+  <PropertyGroup Condition="'$(NuGetAudit)' == ''">
+    <NuGetAudit>true</NuGetAudit>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(NuGetAuditMode)' == ''">
+    <NuGetAuditMode>all</NuGetAuditMode>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(NuGetAuditLevel)' == ''">
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(ContinuousIntegrationBuild) == 'true' OR '$(Configuration)' == 'Release'">
+    <WarningsAsErrors>(WarningsAsErrors);NU1900;NU1901;NU1902;NU1903;NU1904</WarningsAsErrors>
+  </PropertyGroup>
+
+</Project>
