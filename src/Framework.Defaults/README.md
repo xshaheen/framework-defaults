@@ -8,7 +8,6 @@ of our projects.
 ## Installation
 
 To install this package, you can use the following command:
-[Defaults.csproj](Defaults.csproj)
 
 ```bash
 dotnet add package Framework.Defaults
@@ -17,5 +16,5 @@ dotnet add package Framework.Defaults
 or add the following package reference to your project file:
 
 ```xml
-<PackageReference Include="Framework.Defaults" Version="x.x.x" PrivateAssets="all"/>
+<PackageReference Include="Framework.Defaults" Version="x.x.x" PrivateAssets="all" />
 ```

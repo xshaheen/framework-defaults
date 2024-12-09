@@ -1,5 +1,5 @@
-<!-- .targets files - Defines build processes or tasks to be executed during the build lifecycle. -->
 <Project>
+  <!-- .targets files - Defines build processes or tasks to be executed during the build lifecycle. -->
 
   <Import Project="$(MSBuildThisFileDirectory)SupportGeneral.targets" />
   <Import Project="$(MSBuildThisFileDirectory)SupportPackageInformation.targets" Condition=" '$(DisableSupportPackageInformation)' != 'true' " />

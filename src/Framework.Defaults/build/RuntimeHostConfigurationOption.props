@@ -1,6 +1,6 @@
 <Project>
 
-  <ItemGroup Label="Json Config">
+  <ItemGroup Label="Json Config" Condition="$([MSBuild]::IsTargetFrameworkCompatible($(TargetFramework), 'net9.0')) == 'true'" >
     <RuntimeHostConfigurationOption Include="System.Text.Json.Serialization.RespectRequiredConstructorParametersDefault" Value="true" />
     <RuntimeHostConfigurationOption Include="System.Text.Json.Serialization.RespectNullableAnnotationsDefault" Value="true" />
   </ItemGroup>
