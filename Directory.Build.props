@@ -11,4 +11,9 @@
     <CopyrightYearStart>2024</CopyrightYearStart>
   </PropertyGroup>
 
+  <ItemGroup Label="Package References">
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+    <PackageReference Include="MinVer" PrivateAssets="All" />
+  </ItemGroup>
+
 </Project>

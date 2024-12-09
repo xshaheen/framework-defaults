@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="build\Defaults.props" />
+  <Import Project="build\Framework.Defaults.props" />
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -10,6 +10,7 @@
     <IncludeSymbols>false</IncludeSymbols>
     <NoWarn>$(NoWarn);NU5128;</NoWarn>
     <DevelopmentDependency>true</DevelopmentDependency>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +22,6 @@
     <None Include="_._" Pack="true" PackagePath="lib\$(TargetFramework)" Visible="false" />
   </ItemGroup>
 
-  <Import Project="build\Defaults.targets" />
+  <Import Project="build\Framework.Defaults.targets" />
 
 </Project>

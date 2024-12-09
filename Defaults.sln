@@ -13,11 +13,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Directory.Solution.props = Directory.Solution.props
 		nuget.config = nuget.config
 		README.md = README.md
+		Directory.Build.targets = Directory.Build.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Defaults", "src\Defaults\Defaults.csproj", "{C9525AC4-A52E-4D52-A9A4-389D9FF6A1CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Defaults", "src\Framework.Defaults\Framework.Defaults.csproj", "{C9525AC4-A52E-4D52-A9A4-389D9FF6A1CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Defaults.Tests.Integrations", "tests\Defaults.Tests.Integrations\Defaults.Tests.Integrations.csproj", "{7A7B8583-0494-496B-A63F-C0134194D633}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework.Defaults.Tests.Integrations", "tests\Framework.Defaults.Tests.Integrations\Framework.Defaults.Tests.Integrations.csproj", "{7A7B8583-0494-496B-A63F-C0134194D633}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
