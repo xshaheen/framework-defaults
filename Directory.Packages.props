@@ -1,13 +1,16 @@
 <Project>
+
   <PropertyGroup>
     <!-- 👇 Use directory.packages.props for nuget package versions -->
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
     <!-- 👇 Enables central package transitive pinning to ensure consistent transitive dependencies across projects -->
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
+
   <ItemGroup>
     <GlobalPackageReference Include="CSharpier.MSBuild" Version="0.30.2" />
   </ItemGroup>
+
   <ItemGroup>
     <PackageVersion Include="coverlet.collector" Version="6.0.2" />
     <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="8.0.0" />
@@ -19,4 +22,5 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageVersion>
   </ItemGroup>
+
 </Project>
