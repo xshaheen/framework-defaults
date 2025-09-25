@@ -188,7 +188,7 @@ dotnet_diagnostic.ca1008.severity = suggestion
 # CA0184: 'is' expression's given expression is never of the provided type
 dotnet_diagnostic.cs0184.severity = error
 # CA2249: Consider using 'string.Contains' instead of 'string.IndexOf'
-dotnet_diagnostic.ca2249.severity = suggestion
+dotnet_diagnostic.ca2249.severity = warning
 # CA1018: Mark attributes with AttributeUsageAttribute
 dotnet_diagnostic.ca1018.severity = warning
 # CA1047: Do not declare protected member in sealed type
@@ -215,6 +215,14 @@ dotnet_diagnostic.ca2011.severity = warning
 dotnet_diagnostic.ca2012.severity = warning
 # CA1036: A class that implements IComparable<T> or IComparable should override comparison operators
 dotnet_diagnostic.ca1036.severity = suggestion
+# CA1019: Define accessors for attribute arguments
+dotnet_diagnostic.CA1019.severity = suggestion
+# CA2227: Collection properties should be read only
+dotnet_diagnostic.CA2227.severity = suggestion
+# CA1028: Enum Storage should be Int32
+dotnet_diagnostic.CA1028.severity = suggestion
+# CA1027: Mark enums with FlagsAttribute
+dotnet_diagnostic.CA1027.severity = none
 
 ############ Tests
 
