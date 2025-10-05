@@ -47,11 +47,11 @@
     <!--
       Make sure any documentation comments which are included in code get checked for syntax during the build, but do
       not report warnings for missing comments.
+      CS1591: Missing XML comment for publicly visible type or member 'Type_or_Member'
       IDE0055: Fix formatting (We use CSharpier)
       IDE0010: Add missing cases to switch statement
       IDE0072: Add missing cases to switch expression
       CS1573: Parameter 'parameter' has no matching param tag in the XML comment for 'parameter' (but other parameters do)
-      CS1591: Missing XML comment for publicly visible type or member 'Type_or_Member'
       CS1712: Type parameter 'type_parameter' has no matching typeparam tag in the XML comment on 'type_or_member' (but other type parameters do)
       CA1031: Do not catch general exception types
       CA1062: Validate arguments of public methods
@@ -99,12 +99,11 @@
       CA2254: Log template should be a static expression
       IDE0039: Use local function
     -->
-    <NoWarn Condition="'$(IsTestableProject)' == 'true'">$(NoWarn);1591;CA1707;IDE1006;IDE0022;CS8604;S4144;CA5394;CA1848;MA0076;MA0003;RCS1046;CA2254;IDE0039</NoWarn>
+    <NoWarn Condition="'$(IsTestableProject)' == 'true'">$(NoWarn);CS1591;CA1707;IDE1006;IDE0022;CS8604;S4144;CA5394;CA1848;MA0076;MA0003;RCS1046;CA2254;IDE0039</NoWarn>
     <!--
-      CS1591: Missing XML comment for publicly visible type or member
       CA1707: Identifiers should not contain underscores
     -->
-    <NoWarn Condition="'$(IsAspireHost)' == 'true'">$(NoWarn);CS1591;CA1707</NoWarn>
+    <NoWarn Condition="'$(IsAspireHost)' == 'true'">$(NoWarn);CA1707</NoWarn>
   </PropertyGroup>
 
   <PropertyGroup Label="Error Handling" Condition="'$(Configuration)' == 'Release'">
