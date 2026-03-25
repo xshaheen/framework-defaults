@@ -20,7 +20,11 @@
     <PackageReadmeFile Condition="Exists('$(ProjectDir)README.md')">README.md</PackageReadmeFile>
 
     <!-- Logo -->
-    <PackageIcon Condition=" '$(PackageIcon)' == '' ">logo.png</PackageIcon>
+    <PackageIcon
+      Condition=" '$(PackageIcon)' == ''
+        and (Exists('$(ProjectDir)logo.png') or Exists('$(SolutionDir)logo.png'))"
+      >logo.png</PackageIcon
+    >
   </PropertyGroup>
 
   <ItemGroup Label="Package Files" Condition=" '$(IsTestableProject)' != 'true' ">

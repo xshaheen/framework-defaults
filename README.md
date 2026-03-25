@@ -17,6 +17,18 @@ or add the following package reference to your project file:
 <PackageReference Include="Headless.Defaults" Version="x.x.x" PrivateAssets="all"/>
 ```
 
+## EditorConfig
+
+The package no longer overwrites `$(SolutionDir).editorconfig` during normal builds.
+
+If you want Headless.Defaults to manage the solution-level `.editorconfig`, opt in explicitly:
+
+```xml
+<PropertyGroup>
+  <HeadlessCopyEditorConfigToSolutionDir>true</HeadlessCopyEditorConfigToSolutionDir>
+</PropertyGroup>
+```
+
 ## Publish
 
 ```bash

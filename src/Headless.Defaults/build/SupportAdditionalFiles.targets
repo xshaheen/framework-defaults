@@ -1,13 +1,20 @@
 <Project>
+  <PropertyGroup>
+    <HeadlessCopyEditorConfigToSolutionDir Condition="'$(HeadlessCopyEditorConfigToSolutionDir)' == ''"
+      >false</HeadlessCopyEditorConfigToSolutionDir
+    >
+  </PropertyGroup>
+
   <Target
-    Condition="'$(SolutionDir)' != '' AND $(SolutionDir) != '*Undefined*'"
+    Condition="'$(HeadlessCopyEditorConfigToSolutionDir)' == 'true'
+      and '$(SolutionDir)' != ''
+      and $(SolutionDir) != '*Undefined*'"
     Name="UpdateEditorConfig"
     BeforeTargets="Build"
   >
     <Copy
       SourceFiles="$(MSBuildThisFileDirectory)../configurations/editorconfig.txt"
       DestinationFiles="$(SolutionDir).editorconfig"
-      OverwriteReadOnlyFiles="true"
       SkipUnchangedFiles="true"
     />
   </Target>
